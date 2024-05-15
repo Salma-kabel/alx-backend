@@ -9,6 +9,10 @@ from flask import Flask, render_template, request
 from flask_babel import Babel, negotiate_locale
 
 
+app = Flask(__name__)
+babel = Babel(app)
+
+
 class Config:
     """ configure available languages in our app"""
     LANGUAGES = ['en', 'fr']
@@ -16,9 +20,7 @@ class Config:
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
-app = Flask(__name__)
 app.config.from_object(Config)
-babel = Babel(app)
 
 
 @babel.localeselector
