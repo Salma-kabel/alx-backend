@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+
+
 """Create a get_locale function with the
 babel.localeselector decorator"""
 
@@ -29,7 +31,3 @@ def get_locale():
 def index():
     """outputs “Welcome to Holberton” as page title"""
     return render_template('1-index.html')
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
