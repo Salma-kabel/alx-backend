@@ -44,7 +44,7 @@ class Server:
         dic = {}
         data = self.dataset()
         pages = len(data) // page_size
-        assert index is not None and index > = 0 and index <= len(data)
+        assert index is not None and index >= 0 and index <= len(data)
         dic["index"] = index
         dic["next_index"] = index + page_size
         dic["page_size"] = page_size
