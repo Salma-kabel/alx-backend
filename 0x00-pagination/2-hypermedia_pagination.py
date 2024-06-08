@@ -56,7 +56,7 @@ class Server:
         total = end // page_size
         if total == page:
             dic["next_page"] = None
-            print("t",total)
+            print("t",total, "p",page)
         else:
             print("p",page, "t", total)
             dic["next_page"] = page + 1
