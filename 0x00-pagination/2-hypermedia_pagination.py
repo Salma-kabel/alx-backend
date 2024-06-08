@@ -56,9 +56,7 @@ class Server:
         total = math.ceil(len(self.dataset()) / page_size)
         if total == page:
             dic["next_page"] = None
-            print("t",total, "p",page)
         else:
-            print("p",page, "t", total)
             dic["next_page"] = page + 1
         if page == 1:
             dic["prev_page"] = None
