@@ -37,8 +37,8 @@ class Server:
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """takes two integer arguments page with default value 1
         and page_size with default value 10"""
-        assert page is int and page > 0
-        assert page_size is int and page_size > 0
+        assert isinstance(page, int) and page > 0
+        assert isinstance(page_size, int) and page_size > 0
         start, end = index_range(page, page_size)
         data = self.dataset()
         if (start >= len(data) or end >= len(data)):
