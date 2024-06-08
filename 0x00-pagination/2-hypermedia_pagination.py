@@ -54,7 +54,7 @@ class Server:
         dic["data"] = data
         start, end = index_range(page, page_size)
         total = end // page_size
-        if total == page:
+        if total - 1 == page:
             dic["next_page"] = None
         else:
             dic["next_page"] = page + 1
